@@ -79,7 +79,7 @@ export default function Home() {
               { href: "#results", label: "Results" },
               { href: "#process", label: "How It Works" },
             ].map((link, i) => (
-              
+              <a
                 key={i}
                 href={link.href}
                 className="text-foreground/60 hover:text-primary transition-all duration-300 relative group animate-fade-in glitch-text"
@@ -365,7 +365,7 @@ export default function Home() {
                 </span>
               </div>
               <p className="text-foreground/60 text-sm leading-relaxed mb-4">your solutions easier</p>
-              
+              <a
                 href="mailto:sara@viro-solutions.tech"
                 className="text-primary hover:text-primary/80 transition-colors text-sm font-medium"
               >
