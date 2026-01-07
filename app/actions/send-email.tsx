@@ -3,17 +3,18 @@
 import nodemailer from "nodemailer"
 
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.titan.email",
+  port: 587,
   auth: {
-    user: "n.benkrouidem@esi-sba.dz",
-    pass: "maghnia02",
+    user: "sara@viro-solutions.tech",
+    pass: "Houdaifachekam@2",
   },
 })
 
 export async function sendContactEmail(formData: { name: string; email: string; message: string; phone: string }) {
   try {
     const mailOptions = {
-      from: "n.benkrouidem@esi-sba.dz",
+      from: "sara@viro-solutions.tech",
       to: "sara@viro-solutions.tech",
       subject: `New Contact Form Submission from ${formData.name}`,
       html: `
