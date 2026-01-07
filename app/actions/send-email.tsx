@@ -4,20 +4,19 @@ import nodemailer from "nodemailer"
 
 export async function sendContactEmail(formData: { name: string; email: string; message: string; phone: string }) {
   try {
-    // 1. Create the transporter INSIDE the function
+    // FIX: Define the transporter INSIDE the function
     const transporter = nodemailer.createTransport({
       host: "smtp.titan.email",
       port: 587,
-      secure: false, // true for 465, false for other ports
       auth: {
         user: "sara@viro-solutions.tech",
-        pass: "Houdaifachekam@2", // 2. Use an environment variable here!
+        pass: "Houdaifachekam@2",
       },
     })
 
     const mailOptions = {
-      from: '"Viro Solutions" <sara@viro-solutions.tech>', // Added a friendly name
-      to: "sara@viro-solutions.tech", 
+      from: "sara@viro-solutions.tech",
+      to: "sara@viro-solutions.tech",
       subject: `New Contact Form Submission from ${formData.name}`,
       html: `
         <h2>New Contact Form Submission</h2>
