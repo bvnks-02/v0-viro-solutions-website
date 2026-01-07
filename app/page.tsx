@@ -64,14 +64,10 @@ export default function Home() {
               alt="Viro Solutions"
               width={40}
               height={40}
-              className="transition-all duration-300 group-hover:drop-shadow-[0_0_20px_rgba(34,197,94,0.5)]"
+              className="transition-transform group-hover:shadow-lg group-hover:shadow-primary/50 duration-300"
               priority
             />
-            <span className="font-semibold text-lg text-foreground relative">
-              Viro
-              <span className="absolute left-0 top-0 opacity-0 group-hover:animate-[glitch-before_0.3s_infinite]">Viro</span>
-              <span className="absolute left-0 top-0 opacity-0 group-hover:animate-[glitch-after_0.3s_infinite]">Viro</span>
-            </span>
+            <span className="font-semibold text-lg text-foreground glitch-text">Viro</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
             {[
@@ -79,7 +75,7 @@ export default function Home() {
               { href: "#results", label: "Results" },
               { href: "#process", label: "How It Works" },
             ].map((link, i) => (
-              
+              <a
                 key={i}
                 href={link.href}
                 className="text-foreground/60 hover:text-primary transition-all duration-300 relative group animate-fade-in glitch-text"
@@ -107,7 +103,7 @@ export default function Home() {
               Ship Better, Faster
             </h1>
             <p className="text-base md:text-lg text-foreground/70 text-balance leading-relaxed max-w-2xl mx-auto animate-scan-lines">
-              Unlock your team&apos;s potential. Scale your output without scaling headcount. Deliver more ambitious projects
+              Unlock your team's potential. Scale your output without scaling headcount. Deliver more ambitious projects
               while keeping your margins tight.
             </p>
           </div>
@@ -293,11 +289,12 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { stat: "1200+", label: "Custom Solutions Delivered" },
-              { stat: "98%", label: "Client Satisfaction Rate" },
-              { stat: "45+", label: "Partners Globally" },
+              { stat: "1200+", label: "Custom Solutions Delivered", icon: "📱" },
+              { stat: "98%", label: "Client Satisfaction Rate", icon: "⭐" },
+              { stat: "45+", label: "Partners Globally", icon: "🌍" },
             ].map((item, i) => (
               <div key={i} className="text-center group animate-fade-in-up" style={{ animationDelay: `${i * 150}ms` }}>
+                <div className="mb-4 text-5xl group-hover:scale-110 transition-transform duration-300">{item.icon}</div>
                 <div className="text-4xl md:text-5xl font-bold text-primary mb-2 cyber-text group-hover:animate-neon-glow transition-all">
                   {item.stat}
                 </div>
@@ -316,7 +313,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground cyber-text">Ready to Grow?</h2>
           <p className="text-lg text-foreground/70 mb-10 leading-relaxed">
-            Let&apos;s talk about what&apos;s possible for your team.
+            Let's talk about what's possible for your team.
           </p>
           <Button
             size="lg"
@@ -332,7 +329,7 @@ export default function Home() {
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-background relative">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4 cyber-text">Let&apos;s Talk</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4 cyber-text">Let's Talk</h2>
             <p className="text-lg text-foreground/70">Tell us about your project and how we can help you grow.</p>
           </div>
 
@@ -349,22 +346,18 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 md:gap-12 mb-12">
             <div>
-              <div className="flex items-center gap-2 mb-4 group cursor-pointer">
+              <div className="flex items-center gap-2 mb-4">
                 <Image
                   src="/viro-logo.png"
                   alt="Viro Solutions"
                   width={32}
                   height={32}
-                  className="transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(34,197,94,0.5)]"
+                  className="transition-transform"
                 />
-                <span className="font-semibold text-foreground relative">
-                  Viro
-                  <span className="absolute left-0 top-0 opacity-0 group-hover:animate-[glitch-before_0.3s_infinite]">Viro</span>
-                  <span className="absolute left-0 top-0 opacity-0 group-hover:animate-[glitch-after_0.3s_infinite]">Viro</span>
-                </span>
+                <span className="font-semibold text-foreground glitch-text">Viro</span>
               </div>
               <p className="text-foreground/60 text-sm leading-relaxed mb-4">your solutions easier</p>
-              
+              <a
                 href="mailto:sara@viro-solutions.tech"
                 className="text-primary hover:text-primary/80 transition-colors text-sm font-medium"
               >
