@@ -64,10 +64,14 @@ export default function Home() {
               alt="Viro Solutions"
               width={40}
               height={40}
-              className="transition-transform group-hover:shadow-lg group-hover:shadow-primary/50 duration-300"
+              className="transition-all duration-300 group-hover:drop-shadow-[0_0_20px_rgba(34,197,94,0.5)]"
               priority
             />
-            <span className="font-semibold text-lg text-foreground glitch-text">Viro</span>
+            <span className="font-semibold text-lg text-foreground relative">
+              Viro
+              <span className="absolute left-0 top-0 opacity-0 group-hover:animate-[glitch-before_0.3s_infinite]">Viro</span>
+              <span className="absolute left-0 top-0 opacity-0 group-hover:animate-[glitch-after_0.3s_infinite]">Viro</span>
+            </span>
           </div>
           <div className="hidden md:flex items-center gap-8">
             {[
@@ -75,7 +79,7 @@ export default function Home() {
               { href: "#results", label: "Results" },
               { href: "#process", label: "How It Works" },
             ].map((link, i) => (
-              <a
+              
                 key={i}
                 href={link.href}
                 className="text-foreground/60 hover:text-primary transition-all duration-300 relative group animate-fade-in glitch-text"
@@ -346,18 +350,22 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 md:gap-12 mb-12">
             <div>
-              <div className="flex items-center gap-2 mb-4">
+              <div className="flex items-center gap-2 mb-4 group cursor-pointer">
                 <Image
                   src="/viro-logo.png"
                   alt="Viro Solutions"
                   width={32}
                   height={32}
-                  className="transition-transform"
+                  className="transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(34,197,94,0.5)]"
                 />
-                <span className="font-semibold text-foreground glitch-text">Viro</span>
+                <span className="font-semibold text-foreground relative">
+                  Viro
+                  <span className="absolute left-0 top-0 opacity-0 group-hover:animate-[glitch-before_0.3s_infinite]">Viro</span>
+                  <span className="absolute left-0 top-0 opacity-0 group-hover:animate-[glitch-after_0.3s_infinite]">Viro</span>
+                </span>
               </div>
               <p className="text-foreground/60 text-sm leading-relaxed mb-4">your solutions easier</p>
-              <a
+              
                 href="mailto:sara@viro-solutions.tech"
                 className="text-primary hover:text-primary/80 transition-colors text-sm font-medium"
               >
