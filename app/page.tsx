@@ -107,7 +107,7 @@ export default function Home() {
               Ship Better, Faster
             </h1>
             <p className="text-base md:text-lg text-foreground/70 text-balance leading-relaxed max-w-2xl mx-auto animate-scan-lines">
-              Unlock your team's potential. Scale your output without scaling headcount. Deliver more ambitious projects
+              Unlock your team&apos;s potential. Scale your output without scaling headcount. Deliver more ambitious projects
               while keeping your margins tight.
             </p>
           </div>
@@ -293,12 +293,11 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { stat: "1200+", label: "Custom Solutions Delivered", icon: "📱" },
-              { stat: "98%", label: "Client Satisfaction Rate", icon: "⭐" },
-              { stat: "45+", label: "Partners Globally", icon: "🌍" },
+              { stat: "1200+", label: "Custom Solutions Delivered" },
+              { stat: "98%", label: "Client Satisfaction Rate" },
+              { stat: "45+", label: "Partners Globally" },
             ].map((item, i) => (
               <div key={i} className="text-center group animate-fade-in-up" style={{ animationDelay: `${i * 150}ms` }}>
-                <div className="mb-4 text-5xl group-hover:scale-110 transition-transform duration-300">{item.icon}</div>
                 <div className="text-4xl md:text-5xl font-bold text-primary mb-2 cyber-text group-hover:animate-neon-glow transition-all">
                   {item.stat}
                 </div>
@@ -317,7 +316,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground cyber-text">Ready to Grow?</h2>
           <p className="text-lg text-foreground/70 mb-10 leading-relaxed">
-            Let's talk about what's possible for your team.
+            Let&apos;s talk about what&apos;s possible for your team.
           </p>
           <Button
             size="lg"
@@ -333,7 +332,7 @@ export default function Home() {
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-background relative">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4 cyber-text">Let's Talk</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4 cyber-text">Let&apos;s Talk</h2>
             <p className="text-lg text-foreground/70">Tell us about your project and how we can help you grow.</p>
           </div>
 
